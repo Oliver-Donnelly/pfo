@@ -1,6 +1,20 @@
 <html>
 
 <head>
+    <script>
+        const startDate = new Date('2008-06-04');
+        const currentDate = new Date();
+        const yearsDifference = currentDate.getFullYear() - startDate.getFullYear();
+        const monthDifference = currentDate.getMonth() - startDate.getMonth();
+        const dayDifference = currentDate.getDate() - startDate.getDate();
+        
+        let age;
+        if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
+            yearsFromJune2008 = yearsDifference - 1;
+        } else {
+            yearsFromJune2008 = yearsDifference;
+        }
+    </script>
     <title>portfolio</title>
     <style>
         body {
@@ -34,9 +48,9 @@
                 </a>
             </div>
             <div style="text-align: left;">
-                <p>Add your paragraphs here</p>
-                <p>You can add multiple lines like this</p>
-                <p>Each paragraph will be a new line</p>
+                <p>I am <script>document.write(yearsFromJune2008);</script> years old.</p>
+                <p>I'm a software developer with a passion for creating efficient and innovative solutions.</p>
+                <p>My expertise includes Java, Python, and Swift programming languages.</p>
             </div>
         </div>
     </div>
